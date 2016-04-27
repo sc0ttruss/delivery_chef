@@ -1,0 +1,9 @@
+topology "standalone"
+server_name = "<%=node['delivery-chef']['api_fqdn']%>"
+api_fqdn server_name
+
+oc_id['applications'] = {
+    'supermarket' => {
+       'redirect_uri' => "<%=node['delivery_chef']['delivery_server_fqdn']%>/auth/chef_oauth2/callback"
+     }
+  }
