@@ -36,9 +36,17 @@ bash 'start all the chef services' do
   code <<-EOH
   chef-server-ctl reconfigure
   opscode-push-jobs-server-ctl reconfigure
-  chef-manage-ctl reconfigure
   EOH
 end
+
+bash 'start all the chef services' do
+  user 'root'
+  cwd '/tmp'
+  code <<-EOH
+  opscode-manage-ctl reconfigure
+  EOH
+end
+
 #
 # bash 'create a delivery user on the chef Server' do
 #  user 'root'
