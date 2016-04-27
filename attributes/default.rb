@@ -4,7 +4,7 @@
 # You can also replae file:// with https:// for remote repos.
 default['delivery_chef']['use_package_manager'] = false
 default['delivery_chef']['base_package_url'] = 'file:///mnt/share/chef'
-default['delivery_chef']['delivery_server_fqdn'] = 'delivery.myorg.chefdemo.net'
+default['delivery_chef']['delivery_server_fqdn'] = 'https://delivery.myorg.chefdemo.net'
 default['delivery-chef']['api_fqdn'] = 'chef.myorg.chefdemo.net'
 default['delivery_chef']['kitchen_shared_folder'] = '/mnt/share/chef'
 # default['delivery-chef']['api_fqdn'] = node['fqdn']
