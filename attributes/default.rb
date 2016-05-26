@@ -12,7 +12,7 @@ default['delivery_chef']['kitchen_shared_folder'] = '/mnt/share/chef'
 # note the package "name" must match the name used by yum/rpm etc.
 # get your package list here https://packages.chef.io/stable/el/7/
 default['delivery_chef']['organisation'] = 'myorg'
-default['delivery_chef']['packages']['chef-server-core'] = 'chef-server-core-12.5.0-1.el7.x86_64.rpm'
-default['delivery_chef']['packages']['manage'] = 'opscode-manage-1.21.0-1.el7.x86_64.rpm'
-default['delivery_chef']['packages']['reporting'] = 'opscode-reporting-1.5.6-1.el7.x86_64.rpm'
+default['delivery_chef']['packages']['chef-server-core'] = 'chef-server-core-12.6.0-1.el7.x86_64.rpm'
+default['delivery_chef']['packages']['manage'] = 'chef-manage-2.3.0-1.el7.x86_64.rpm'
+default['delivery_chef']['packages']['reporting'] = 'opscode-reporting-1.6.0-1.el7.x86_64.rpm'
 default['delivery_chef']['packages']['push-jobs'] = 'opscode-push-jobs-server-1.1.6-1.x86_64.rpm'

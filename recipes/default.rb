@@ -36,8 +36,8 @@ bash 'start all the chef services' do
   user 'root'
   cwd '/tmp'
   code <<-EOH
-  opscode-manage-ctl reconfigure
-  opscode-reporting-ctl reconfigure
+  opscode-manage-ctl reconfigure --accept-license
+  opscode-reporting-ctl reconfigure --accept-license
   EOH
 end
 
