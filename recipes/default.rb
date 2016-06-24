@@ -64,7 +64,7 @@ bash 'create a delivery user on the chef Server' do
 user 'root'
 cwd '/tmp'
 code <<-EOH
-chef-server-ctl user-create delivery Delivery myorg delivery@email.fake random_password  --filename /etc/opscode/delivery.pem
+chef-server-ctl user-create delivery Delivery myorg delivery@email.fake random_password  --filename /etc/opscode/srv-delivery.pem
 chef-server-ctl org-create myorg 'myorg' --association_user delivery --filename myorg-validator.pem
 chef-server-ctl org-user-add myorg delivery
 EOH
@@ -73,8 +73,8 @@ end
 # copy credentials somewhere safe, needs more work,
 # will be fine in testkitchen, but nowhere else
 
-remote_file '/mnt/share/chef/delivery.pem' do
-  source 'file:///etc/opscode/delivery.pem'
+remote_file '/mnt/share/chef/srv-delivery.pem' do
+  source 'file:///etc/opscode/srv-delivery.pem'
   owner 'root'
   group 'root'
   mode 00755
