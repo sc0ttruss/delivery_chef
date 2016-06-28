@@ -64,9 +64,9 @@ bash 'create a delivery user on the chef Server' do
 user 'root'
 cwd '/tmp'
 code <<-EOH
-chef-server-ctl user-create delivery Delivery myorg delivery@email.fake random_password  --filename /etc/opscode/srv-delivery.pem
-chef-server-ctl org-create myorg 'myorg' --association_user delivery --filename myorg-validator.pem
-chef-server-ctl org-user-add myorg delivery
+chef-server-ctl user-create srv-delivery Delivery myorg delivery@email.fake random_password  --filename /etc/opscode/srv-delivery.pem
+chef-server-ctl org-create myorg 'myorg' --association_user srv-delivery --filename myorg-validator.pem
+chef-server-ctl org-user-add myorg srv-delivery
 EOH
 end
 
